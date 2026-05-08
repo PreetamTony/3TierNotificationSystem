@@ -1,8 +1,10 @@
 using NotificationApp.Models;
 namespace NotificationSystem.Interfaces
 {
-    public interface INotification
+    public interface INotificationSender
     {
+        string NotificationType { get; }
+        bool CanSendTo(User user);
         void Send(User user, Notification notification);
     }
 }   
