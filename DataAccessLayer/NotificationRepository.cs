@@ -131,7 +131,7 @@ namespace NotificationSystem.DataAccessLayer
                 NotificationType = r.GetString(r.GetOrdinal("notification_type")),
                 SentDate = r.GetDateTime(r.GetOrdinal("sent_date")),
                 UserName = r.GetString(r.GetOrdinal("user_name")),
-                UserEmail = r.GestString(r.GetOrdinal("user_email")),
+                UserEmail = r.GetString(r.GetOrdinal("user_email")),
                 UserPhone = r.GetString(r.GetOrdinal("user_phone"))
             };
     }
