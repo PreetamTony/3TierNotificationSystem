@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using NotificationApp.Models;
 using NotificationSystem.BusinessLayer;
@@ -15,8 +15,10 @@ namespace NotificationSystem.Presentation
 
         public ConsoleMenu()
         {
+            DatabaseHelper.EnsureTablesExist();
+
             _notificationService = new NotificationService();
-            _userRepository = new UserRepository();
+            _userRepository      = new UserRepository();
         }
         public void Start()
         {
@@ -271,10 +273,11 @@ namespace NotificationSystem.Presentation
             foreach (var user in users)
             {
                 Console.WriteLine("\n--------------------------");
+                Console.WriteLine($"ID    : {user.Id}");
                 Console.WriteLine(user.ToString());
-                Console.WriteLine($"Valid Email: {user.HasValidEmail}");
-                Console.WriteLine($"Valid Phone: {user.HasValidPhone}");
-                Console.WriteLine($"Available Types: {string.Join(", ", user.GetAvailableNotificationTypes())}");
+                Console.WriteLine($"Valid Email     : {user.HasValidEmail}");
+                Console.WriteLine($"Valid Phone     : {user.HasValidPhone}");
+                Console.WriteLine($"Available Types : {string.Join(", ", user.GetAvailableNotificationTypes())}");
             }
         }
 

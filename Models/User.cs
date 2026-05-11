@@ -3,9 +3,10 @@ using NotificationSystem.BusinessLayer;
 
 namespace NotificationApp.Models
 {
- 
     public class User
     {
+        public int Id { get; set; }
+
         private string _name = string.Empty;
         private string _email = string.Empty;
         private string _phone = string.Empty;
@@ -23,7 +24,6 @@ namespace NotificationApp.Models
             }
         }
 
- 
         public string Email
         {
             get => _email;
@@ -46,18 +46,14 @@ namespace NotificationApp.Models
             }
         }
 
- 
         public User() { }
 
- 
         public User(string name, string email, string phone)
         {
             Name = name;
             Email = email;
             Phone = phone;
         }
-
-
 
         public override string ToString()
         {
@@ -66,7 +62,6 @@ namespace NotificationApp.Models
 
         public bool HasValidEmail => !string.IsNullOrWhiteSpace(Email) && ValidationHelper.IsValidEmail(Email);
         public bool HasValidPhone => !string.IsNullOrWhiteSpace(Phone) && ValidationHelper.IsValidPhone(Phone);
-
 
         public string[] GetAvailableNotificationTypes()
         {

@@ -8,6 +8,8 @@ namespace NotificationApp.Models
         private string _notificationType = string.Empty;
         public int Id { get; set; }
 
+        public int UserId { get; set; }
+
         public string Message
         {
             get => _message;
