@@ -63,6 +63,9 @@ namespace NotificationApp.Models
         public bool HasValidEmail => !string.IsNullOrWhiteSpace(Email) && ValidationHelper.IsValidEmail(Email);
         public bool HasValidPhone => !string.IsNullOrWhiteSpace(Phone) && ValidationHelper.IsValidPhone(Phone);
 
+        // EF Core Navigation Property
+        public virtual ICollection<Notification> Notifications { get; set; } = new List<Notification>();
+
         public string[] GetAvailableNotificationTypes()
         {
             var types = new System.Collections.Generic.List<string>();

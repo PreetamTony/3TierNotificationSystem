@@ -15,7 +15,10 @@ namespace NotificationSystem.Presentation
 
         public ConsoleMenu()
         {
-            DatabaseHelper.EnsureTablesExist();
+            using (var context = new NotificationDbContext())
+            {
+                context.Database.EnsureCreated();
+            }
 
             _notificationService = new NotificationService();
             _userRepository      = new UserRepository();
@@ -303,7 +306,7 @@ namespace NotificationSystem.Presentation
     }
 }
 
-class Program
+partial class Program
 {
     static void Main(string[] args)
     {

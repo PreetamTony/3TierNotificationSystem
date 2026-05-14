@@ -41,6 +41,10 @@ namespace NotificationApp.Models
         }
 
         public DateTime SentDate { get; private set; } = DateTime.Now;
+
+        // EF Core Navigation Property
+        public virtual User User { get; set; } = null!;
+
         public Notification() { }
         public Notification(string message, string type)
         {
