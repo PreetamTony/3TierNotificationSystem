@@ -1,8 +1,8 @@
 using System;
-using NotificationSystem.Interfaces;
+using NotificationApp.Models;
 using NotificationApp.Models;
 
-namespace NotificationSystem.NotificationSenders
+namespace NotificationApp.Business.NotificationSenders
 {
     public class SmsNotificationSender : INotificationSender
     {

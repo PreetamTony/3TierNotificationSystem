@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using NotificationApp.Models;
 
-namespace NotificationSystem.DataAccessLayer
+namespace NotificationApp.DataAccess
 {
     public class UserRepository
     {

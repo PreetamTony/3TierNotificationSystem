@@ -1,5 +1,5 @@
 using NotificationApp.Models;
-namespace NotificationSystem.Interfaces
+namespace NotificationApp.Models
 {
     public interface INotificationSender
     {

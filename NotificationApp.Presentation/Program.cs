@@ -1,11 +1,10 @@
-﻿using System;
+using System;
 using System.Linq;
 using NotificationApp.Models;
-using NotificationSystem.BusinessLayer;
-using NotificationSystem.Presentation;
-using NotificationSystem.DataAccessLayer;
+using NotificationApp.Business;
+using NotificationApp.DataAccess;
 
-namespace NotificationSystem.Presentation
+namespace NotificationApp.Presentation
 {
     public class ConsoleMenu
     {
@@ -298,13 +297,12 @@ namespace NotificationSystem.Presentation
             Console.ResetColor();
         }
     }
-}
-
-class Program
-{
-    static void Main(string[] args)
+    class Program
     {
-        var consoleMenu = new ConsoleMenu();
-        consoleMenu.Start();
+        static void Main(string[] args)
+        {
+            var consoleMenu = new ConsoleMenu();
+            consoleMenu.Start();
+        }
     }
 }

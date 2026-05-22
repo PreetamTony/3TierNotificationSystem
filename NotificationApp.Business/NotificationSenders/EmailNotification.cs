@@ -1,8 +1,8 @@
 using System;
 using NotificationApp.Models;
-using NotificationSystem.Interfaces;
+using NotificationApp.Models;
 
-namespace NotificationSystem.NotificationSenders
+namespace NotificationApp.Business.NotificationSenders
 {
     public class EmailNotificationSender : INotificationSender
     {

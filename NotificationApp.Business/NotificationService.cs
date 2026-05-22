@@ -1,12 +1,14 @@
 using System;
 using System.Linq;
 using NotificationApp.Models;
-using NotificationSystem.Interfaces;
-using NotificationSystem.NotificationSenders;
-using NotificationSystem.DataAccessLayer;
-using NotificationSystem.BusinessLayer;
+using NotificationApp.Business.NotificationSenders;
+using NotificationApp.Models;
+using NotificationApp.Business.NotificationSenders;
 
-namespace NotificationSystem.BusinessLayer
+using NotificationApp.DataAccess;
+using NotificationApp.Business;
+
+namespace NotificationApp.Business
 {
     public class NotificationService
     {

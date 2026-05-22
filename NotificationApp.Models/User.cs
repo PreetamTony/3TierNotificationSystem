@@ -1,5 +1,4 @@
 using System;
-using NotificationSystem.BusinessLayer;
 
 namespace NotificationApp.Models
 {

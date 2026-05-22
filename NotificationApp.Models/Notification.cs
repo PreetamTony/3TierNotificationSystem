@@ -38,13 +38,13 @@ namespace NotificationApp.Models
             }
         }
 
-        public DateTime SentDate { get; private set; } = DateTime.Now;
+        public DateTime SentDate { get; private set; } = DateTime.UtcNow;
         public Notification() { }
         public Notification(string message, string type)
         {
             Message = message;
             NotificationType = type;
-            SentDate = DateTime.Now;
+            SentDate = DateTime.UtcNow;
         }
 
     }

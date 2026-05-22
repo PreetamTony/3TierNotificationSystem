@@ -1,5 +1,5 @@
 using System.Text.RegularExpressions;
-namespace NotificationSystem.BusinessLayer
+namespace NotificationApp.Models
 {
     public static class ValidationHelper{
         public static bool IsValidEmail(string email){
